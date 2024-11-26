@@ -1,7 +1,10 @@
 import socket
 
 
-def player():
+def client():
+    """
+    Connects to a Magic 8-ball server to ask a question and receive an answer.
+    """
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.connect(('127.0.0.1', 5000))
     question = input("Ask the magic 8-ball to know the answer: ")
@@ -13,4 +16,4 @@ def player():
 
 
 if __name__ == '__main__':
-    player()
+    client()

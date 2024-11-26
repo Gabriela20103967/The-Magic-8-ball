@@ -2,6 +2,11 @@ import signal
 import time
 
 def signal_handler(sig, frame):
+    """
+    Handles termination signals (e.g., SIGINT) gracefully.
+    :param sig:
+    :param frame:
+    """
     print(f'Received signal: {sig}. Exiting.')
     exit(0)
 
